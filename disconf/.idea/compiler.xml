@@ -9,8 +9,8 @@
         <module name="disconf" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="disconf" target="1.5" />
+    <bytecodeTargetLevel target="9">
+      <module name="disconf" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
