@@ -1,8 +1,6 @@
 package com.monlie;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.Producer;
-import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.*;
 
 import java.util.Properties;
 
@@ -20,7 +18,13 @@ public class KafkaProducerTest {
 
         Producer<String, String> producer = new KafkaProducer<>(props);
         for (int i = 0; i < 100; i++) {
-            producer.send(new ProducerRecord<>("test", Integer.toString(i), "tianfeng" + Integer.toString(i)));
+            producer.send(new ProducerRecord<>("test", Integer.toString(i), "tianfeng" + Integer.toString(i)), new Callback() {
+                @Override
+                public void onCompletion(RecordMetadata metadata, Exception exception) {
+                    long offset = metadata.offset();
+                    System.err.println("offset ---> "+offset);
+                }
+            });
         }
         producer.close();
     }
