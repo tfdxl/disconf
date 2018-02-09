@@ -91,6 +91,11 @@
         </dependency>
 
     </dependencies>
-
+    <developers>
+        <developer>
+            <id>520</id>
+            <name>tianfeng</name>
+        </developer>
+    </developers>
 
 </project>
