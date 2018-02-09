@@ -3,9 +3,15 @@ package com.monlie.cli;
 import org.apache.commons.cli.*;
 import org.junit.platform.commons.util.StringUtils;
 
-public class CommandReader {
+public class CommandReader extends Parent {
 
-    public static void main(String[] args) throws Exception {
+    static {
+        System.err.println("This is in static block");
+    }
+
+    public final static void main(String[] args) throws Exception {
+
+        System.err.println("This is in main method");
 
         //首先声明一些选项
         final Options options = new Options();
