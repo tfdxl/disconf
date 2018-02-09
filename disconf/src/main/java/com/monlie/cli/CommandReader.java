@@ -13,15 +13,16 @@ public class CommandReader extends Parent {
 
         System.err.println("This is in main method");
 
-        //首先声明一些选项
+        //1.首先声明一些选项
         final Options options = new Options();
         final Option option = new Option("f", true, "configuration file path");
         options.addOption(option);
 
-        //声明一个命令行参数
+        //2.声明一个命令行参数
         final CommandLineParser parser = new PosixParser();
         CommandLine cmd = null;
         try {
+            //3.解析
             cmd = parser.parse(options, args);
         } catch (ParseException e) {
 
