@@ -2,3 +2,6 @@
 .idea/
 target/
 disconf.iml
+/.idea/
+/disconf.iml
+/target/
