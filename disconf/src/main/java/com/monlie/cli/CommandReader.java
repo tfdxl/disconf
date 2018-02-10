@@ -29,7 +29,7 @@ public class CommandReader extends Parent {
         }
 
         String configFilePath = null;
-        if (cmd.hasOption("f")) {
+        if (cmd != null && cmd.hasOption("f")) {
             configFilePath = cmd.getOptionValue("f");
             System.err.println("the configuration file path is---> " + configFilePath);
         } else {

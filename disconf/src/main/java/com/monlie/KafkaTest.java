@@ -19,5 +19,6 @@ public class KafkaTest {
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
         Producer<String, String> producer = new KafkaProducer<>(props);
+        System.err.println(producer);
     }
 }

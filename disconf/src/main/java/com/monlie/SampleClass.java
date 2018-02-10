@@ -26,7 +26,8 @@ public class SampleClass {
         });
 
         SampleClass sampleClass = (SampleClass) enhancer.create();
-        sampleClass.test("monlie");
+        String s = sampleClass.test("monlie");
+        System.err.println(s);
     }
 
     public static void testFixedValue() {
