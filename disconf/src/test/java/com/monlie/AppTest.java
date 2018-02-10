@@ -4,6 +4,11 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 /**
  * Unit test for simple App.
  */
@@ -27,7 +32,11 @@ public class AppTest extends TestCase {
     /**
      * Rigourous Test :-)
      */
-    public void testApp() {
+    public void testApp() throws IOException {
+        ServerSocket serverSocket = new ServerSocket(1234);
+        Socket s = serverSocket.accept();
+        InputStream in = s.getInputStream();
+        in.available();
         assertTrue(true);
     }
 }
