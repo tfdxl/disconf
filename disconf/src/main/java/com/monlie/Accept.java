@@ -6,8 +6,23 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 
-public class Accept {
-    public static void main(String[] args) {
+/**
+ * Accept.
+ */
+public final class Accept {
+
+    /**
+     * cannot construct.
+     */
+    private Accept() {
+    }
+
+    /**
+     * main.
+     *
+     * @param args fsd.
+     */
+    public static void main(final String[] args) {
         try {
             ClassLoader c = Thread.currentThread().getContextClassLoader();
             System.err.println(c);
