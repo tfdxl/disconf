@@ -21,4 +21,9 @@ public class Table<T> {
         values[size] = value;
         size++;
     }
+
+    public static void main(String[] args) {
+        Table<String> table = new Table<>();
+        table.insert("test");
+    }
 }
