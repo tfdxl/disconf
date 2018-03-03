@@ -1,5 +1,7 @@
 package com.monlie;
 
+import org.apache.kafka.clients.admin.ConfigEntry;
+
 public class Table<T> {
 
     private Object[] values;
@@ -25,5 +27,9 @@ public class Table<T> {
     public static void main(String[] args) {
         Table<String> table = new Table<>();
         table.insert("test");
+
+        ConfigEntry configEntry = new ConfigEntry("tianfeng", "monlie");
+        System.err.println(configEntry.isDefault());
+        System.err.println(configEntry);
     }
 }
